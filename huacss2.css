@@ -23,8 +23,7 @@ img{width: 100%;
 .columns {
     width: 100%;
     column-width: auto;
-    border-color: red;
-
+    margin: 6px auto;
     -webkit-column-count:3;
     -moz-column-count:3;
     -o-column-count:3;
