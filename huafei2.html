@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport"
+          content="
+          height = device-height,
+          width = device-width,
+          mininum-scale = 1.0,
+          mininum-scale = 1.0,
+          user-scalable = no
+          "/>
+    <script src="lib/jquery-1.12.0.min.js"></script>
+    <script src="lib/angular-1.5.3.min.js"></script>
+    <script src="huajs2.js"></script>
+    <link rel="stylesheet" type="text/css" href="huacss2.css" />
+    <title>购买流量</title>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl" >
+<div  id="top_tex" >购买中心</div>
+<img src="hello.png">
+<div style="margin-top: 6px; margin-bottom: 6px ">产品介绍</div>
+<div class="columns">
+    <figure class = "test1" ng-click="one()">
+        <img src="buy1.png">
+        <figcaption >
+            <h2> </h2>
+        </figcaption>
+    </figure>
+    <figure class = "test1" ng-click="two()">
+        <img src="buy2.png">
+        <figcaption >
+            <h2> </h2>
+        </figcaption>
+    </figure>
+    <figure class = "test1" ng-click="three()">
+        <img src="buy3.png">
+        <figcaption >
+            <h2> </h2>
+        </figcaption>
+    </figure>
+    <figure class = "test1" ng-click="four()">
+        <img src="buy4.png">
+        <figcaption >
+            <h2> </h2>
+        </figcaption>
+    </figure>
+    <figure class = "test1" ng-click="five()">
+        <img src="buy5.png">
+        <figcaption >
+            <h2> </h2>
+        </figcaption>
+    </figure>
+    <figure class = "test1" ng-click="six()" >
+        <img src="buy6.png">
+        <figcaption >
+            <h2> </h2>
+        </figcaption>
+    </figure>
+
+</div>
+
+<div  id = "instuct"style="margin-bottom: 6px ;margin-top:6px ">{{message}}</div>
+<div style="text-align:center;margin:0 auto;" >
+    <input id ="text_input"  ng-model = "phones" >
+    <input ng-click="go()" id = "text_buy" type="button"  value="立即购买"  >
+    <p id ="text_input4"  >
+</div>
+
+</body>
+</html>

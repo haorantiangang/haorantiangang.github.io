@@ -1,0 +1,17 @@
+<!doctype html>
+<html ng-app>
+<head>
+    <script src="http://code.angularjs.org/1.2.25/angular.min.js"></script>
+    <script src="http://code.angularjs.org/1.2.25/angular-animate.min.js"></script>
+</head>
+<body>
+<div ng-init="checked=true">
+    <label>
+        <input type="checkbox" ng-model="checked" style="float:left; margin-right:10px;"> 可见...
+    </label>
+    <div class="check-element animate-show-hide" ng-show="checked" style="clear:both;">
+        可见...
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CSS3 animation-play-state属性</title>
+    <script src="lib/jquery-1.12.0.min.js"></script>
+    <script src="lib/angular-1.5.3.min.js"></script>
+    <style type="text/css">
+        @-webkit-keyframes mytranslate
+        {
+            0%{}
+            50%{-webkit-transform:translateX(200px);}
+            100%{}
+        }
+        #div1
+        {
+            width:40px;
+            height:40px;
+            border-radius:20px;
+            background-color:red;
+            -webkit-animation-name:mytranslate;
+            -webkit-animation-timing-function:linear;
+            -webkit-animation-duration:3s;
+            -webkit-animation-iteration-count:infinite;
+        }
+        #container
+        {
+            display:inline-block;
+            width:240px;
+            border:1px solid silver;
+        }
+    </style>
+
+
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+<div id="container">
+    <div id="div1"></div>
+</div>
+<div id="control_btn">
+    <input id="btn_pause" type="button" value="暂停" my-click/>
+    <input id="btn_run" type="button" value="播放" my-clickrun/>
+    <button >{{name}}</button>
+</div>
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl',
+            function($scope) {
+                $scope.name="hao"
+            });
+
+//    app.directive('myClick',function(){
+//
+//
+//        return {
+//            restrict: 'AE',
+//            scope: {},
+//            link:function link(scope, element, attrs){
+//                element.on("click",function(){
+//                    angular.element("#div1").css("-webkit-animation-play-state", "paused");
+//                })
+//            }
+//        }
+//    })
+//    app.directive('myClickrun',function(){
+//
+//
+//        return {
+//            restrict: 'AE',
+//            scope: {},
+//            link:function link(scope, element, attrs){
+//                element.on("click",function(){
+//                    angular.element("#div1").css("-webkit-animation-play-state", "running");
+//                })
+//            }
+//        }
+//    })
+
+            angular.element('#btn_pause').on("click",function(){
+               // alert( "Hello "  );
+                angular.element("#div1").css("-webkit-animation-play-state", "paused");
+
+            });
+            angular.element("#btn_run").on("click",function(){
+                angular.element("#div1").css("-webkit-animation-play-state", "running");
+            });
+    //        $(function () {
+    //            $("#btn_pause").click(function () {
+    //                $("#div1").css("-webkit-animation-play-state", "paused");
+    //            });
+    //            $("#btn_run").click(function () {
+    //                $("#div1").css("-webkit-animation-play-state", "running");
+    //            });
+    //        })
+
+
+</script>
+
+
+</body>
+</html>
